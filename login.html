@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPT Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+
+    
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="logo">
+                <a href="/"><img src="./img/Dragon'sLord Logo.jpg" height="65" width="100" /></a>
+            </div>
+        
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html" class="active">Admin</a></li>
+                <li><a href="book.html">Book</a></li>   
+                <li><a href="contact.html">Contact</a></li>
+            </ul>   
+        </nav>
+    </header>
+    <section id="contact-login">
+       
+    <div class="containers">
+    <div class="card">
+    <div class="inner-box" id="card">
+        <div class="card-front">
+            <h1 class="form__title">Login</h1>
+            <form>
+            <div class="form__massage form__massage--error">
+                <div class="form__input-group">
+                <input type="email" class="form__input" placeholder="Username or email " required>
+                <div class="form__input-error-massage"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" placeholder="password" required>
+                <div class="form__input-error-massage"></div>
+            </div>
+           <!--<button type="button" class="submit-btn">Submit</button>-->
+           
+                <div class="form__massage form__massage--error"></div>
+                <div class="form__input-group">
+                   <!--<input type="text" class="form__input" autofocus placeholder="Username or email">-->
+                    <div class="form__input-error-massage"></div>
+                </div>
+                <div class="form__input-group">
+                    <!--<input type="password" class="form__input" autofocus placeholder="Password">-->
+                    <div class="form__input-error-massage"></div>
+                </div>
+               <!--<button onclick="window.location.href='https://www.example.com';">Click Here</button>
+                <button onclick="ligin.html.href='admin.html';">Continue</button>-->
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a href="#" class="form__link">Forgot password?</a>
+            </p>
+            <p class="form__text">
+                <a class="form__link" href="#" id="linkCreateAccount" onclick="openCreateAccount ()" >I'm new here! Create account</a>
+            </p>
+            </form>
+        </div>
+    </div>
+           <!-- <input type="checkbox"><span>Remember Me</span>          
+        </form>
+        <button type="button" class="btn">I'm new Here</button>
+        <a href="">Forgot password</a>-->
+   
+        <div class="card-back">
+            <h1 class="form__title">Create Account</h1>
+            <form>
+                <div class="form__massage form__massage--error">
+                    <div class="form__input-group">
+                    <input type="text" class="form__input" placeholder="Username " required>
+                    <div class="form__input-error-massage"></div>
+                </div>
+            <div class="form__massage form__massage--error">
+                <div class="form__input-group">
+                <input type="email" class="form__input" placeholder="Email Address " required>
+                <div class="form__input-error-massage"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" placeholder="password" required>
+                <div class="form__input-error-massage"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" placeholder="Comfirm Password" required>
+                <div class="form__input-error-massage"></div>
+            </div>
+           <!--<button type="button" class="submit-btn">Submit</button>-->
+           
+                <div class="form__massage form__massage--error"></div>
+                <div class="form__input-group">
+                   <!--<input type="text" class="form__input" autofocus placeholder="Username or email">-->
+                    <div class="form__input-error-massage"></div>
+                </div>
+                <div class="form__input-group">
+                    <!--<input type="password" class="form__input" autofocus placeholder="Password">-->
+                    <div class="form__input-error-massage"></div>
+                </div>
+            
+            <button class="form__button" href="#" type="submit">Continue</button>
+            
+            <p class="form__text">
+                <a class="form__link" href="#" id="linkCreateAccount" onclick="openLogin()" >Already have an account? Sign In</a>
+            </p>
+           <!-- <p class="form__text">
+                <a href="#" class="form__link">Sign In</a>
+            </p>-->
+            </form>
+        </div>           
+     
+    
+    </div>
+    </div>
+    </div>
+        <script>
+
+            var card = document.getElementById("card");
+
+            function openCreateAccount (){
+                card.style.transform = "rotateY(-180deg)";
+            }
+            function openLogin(){
+                card.style.transform = "rotateY(0deg)";
+            }
+
+        </script>
+    
+    </section>
+        <!--
+            <section id="contact-login">
+        <div class="container">
+            <form class="form" id="login">
+                <h1 class="form__title">LogIn</h1>
+                <div class="form__massage form__massage--error">inccoerect username/password combinaton.</div>
+                <div class="form__input-group">
+                    <input type="text" class="from__input" autofocus placeholder="Username or email">
+                    <div class="form__input-error-massage">This is an error massage</div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class="from__input" autofocus placeholder="Password">
+                    <div class="form__input-error-massage"></div>
+                </div>
+                <button class="form__button" type="submit">Continue</button>
+                <p class="form__text">
+                    <a href="#" class="form__link">Forgot your password?</a>
+                </p>
+                <p class="form__text">
+                    <a class="form__link" href="./" id="linkCreateAccount" >Don't have an account? Create account</a>
+                </p>
+            </form>
+        </div>
+        </section>
+    -->
+
+
+         <!-- Footer --> 
+        <footer id="main-footer" class="bg-dark text-center py-1">
+            <div class="container" >
+            <p>Copyright &copy: 2024. Emmalex,  All Right Reserved</p>
+            </div>
+        </footer>
+</body>
+        
+    
+
+</html>
